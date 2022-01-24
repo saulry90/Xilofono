@@ -1,0 +1,285 @@
+//Fonts
+/* @import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@400;500;600&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+
+
+
+// mixins
+%note{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 70px;
+  padding: 20px 0px;
+  border-radius: 10px;
+  font-family: 'Signika';
+  font-weight: normal;
+  
+  &:active {
+    box-shadow: (3px 3px 5px 2px);
+  }
+  &:active span {
+    filter:brightness(130%);
+  }
+}
+@mixin note($bg,$shadow,$height) {
+  @extend %note;
+  background: $bg;
+  box-shadow: $shadow;
+  height: $height;
+}
+
+%notespan {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+@mixin notespan($color) {
+  @extend %notespan;
+  color: $color;
+}
+
+
+
+
+* {cursor: pointer;
+
+  & body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #bbff99;
+    background-image: linear-gradient(319deg, #bbff99 0%, #ffec99 37%, #ff9999 100%);
+  }
+
+  
+
+ // Baqueta
+  & .space {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 100vh;
+      width: 100vw;
+      background-image: url("../img/musicsheet.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      overflow: hidden;
+      transform: rotate(9dg);
+      opacity: 0.2;
+      z-index: -9;
+      
+
+    }
+  
+    & .baqueta {
+      position: absolute;
+      left: var(--mouse-x);
+      top: var(--mouse-y);
+      z-index: 9;
+    }
+} 
+
+
+
+  // Xilofono
+  & .layout {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 75vh;
+    font-size: 3.1vw;
+
+    & .head {
+      width: 60vw;
+      font-family: 'Yusei Magic', sans-serif;
+      font-size: 2.5vw;
+      text-align: center;
+      & h1 {
+        margin: 0;
+      }
+       & p {
+         margin-top: 10px;
+       }
+
+
+    }
+
+    & #container {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 700px;
+      height: 300px;
+      margin: 0 auto;
+
+      & .screw {
+        position: relative;
+        width: 16px;
+        height: 16px;
+        background-color: #c6c3ba;
+        border-radius: 50%;
+        box-shadow: 1px 1px #999999, 1px 1px #999999;
+        &:after {
+          content: "|";
+          position: absolute;
+          top: 0;
+          left: 50%;
+          color: #585757;
+          font-size: 12px;
+          transform: translateX(-52%) rotate(33deg);
+        }
+      }
+
+    
+      // DO
+      & .note:nth-child(1) {
+        @include note(hsl(0, 79%, 57%),3px 3px 0px 2px hsl(0, 79%, 35%),270px);
+        & span {
+          @include notespan(hsl(0, 79%, 35%))
+        }
+        
+      }
+      // RE
+      & .note:nth-child(2) {
+        @include note(hsl(39, 79%, 57%),3px 3px 0px 2px hsl(39, 79%, 35%),250px);
+        & span {
+          @include notespan(hsl(39, 79%, 35%))
+        }
+      }
+      // MI
+      & .note:nth-child(3) {
+        @include note(hsl(85, 79%, 57%),3px 3px 0px 2px hsl(85, 79%, 35%),230px);
+        & span {
+          @include notespan(hsl(85, 79%, 35%))
+        }
+      }
+      // FA
+      & .note:nth-child(4) {
+        @include note(hsl(214, 79%, 57%),3px 3px 0px 2px hsl(214, 79%, 35%),210px);
+        & span {
+          @include notespan(hsl(214, 79%, 35%))
+        }
+      }
+      // SOL
+      & .note:nth-child(5) {
+        @include note(hsl(273, 79%, 57%),3px 3px 0px 2px hsl(273, 79%, 35%),190px);
+        & span {
+          @include notespan(hsl(273, 79%, 35%))
+        }
+      }
+      // LA
+      & .note:nth-child(6) {
+        @include note(hsl(159, 79%, 57%),3px 3px 0px 2px hsl(159, 79%, 35%),170px);
+        & span {
+          @include notespan(hsl(159, 79%, 35%))
+        }
+      }
+      // SI
+      & .note:nth-child(7) {
+        @include note(hsl(26, 82%, 56%),3px 3px 0px 2px hsl(26, 82%, 35%),150px);
+        & span {
+          @include notespan(hsl(26, 82%, 35%))
+        }
+      }
+      // DO
+      & .note:nth-child(8) {
+        @include note(hsl(177, 82%, 56%),3px 3px 0px 2px hsl(177, 82%, 35%),130px);
+        & span {
+          @include notespan(hsl(177, 82%, 35%))
+        }
+        
+      }
+
+
+      // Base
+      & .palos {
+        position: absolute;
+        left: -35px;
+        width: 775px;
+        height: 20px;
+        background: #ba793d;
+        border-radius: 50px;
+        z-index: -1;
+        }
+        & .palo1 {
+          top: 85px;
+          transform: rotate(3deg);
+        }
+        & .palo2 {
+          top: 200px;
+          transform: rotate(357deg);
+        }
+    }
+  }
+}
+  
+
+@media only screen and (max-width: 850px) {
+  .space {
+    & .baqueta {display: none;}
+  }
+  
+  #container {
+    transform:scale(0.8);
+    
+    /* & .note {
+      transform:scale(0.8);
+    } */
+    & .palos {
+      width: 750px;
+      left: -100px;
+    }
+    & .palo1 {
+      top: 98px;
+      transform: rotate(4deg) scale(0.8);;
+    }
+    & .palo2 {
+      top: 190px;
+      transform: rotate(356deg) scale(0.8);;
+    }
+  }
+}  
+  
+@media only screen and (max-width: 680px) {
+  #landscape {
+    display: flex;
+    position: fixed;
+    top: 0;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    background: #f2f2f2;
+    z-index: 990000;
+    width: 100%;
+    height: 100vh;
+    font-size: 120%;
+    align-items: center;
+    justify-content: center;
+  }
+  .layout {
+    justify-content: center;
+    height: 100vh;
+
+    & #container {
+      transform:scale(0.6);
+    }
+  }
+}
+
+

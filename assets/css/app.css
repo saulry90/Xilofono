@@ -1,0 +1,325 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@400;500;600&display=swap'); */
+@import url("https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap");
+* .layout #container .note:nth-child(1), * .layout #container .note:nth-child(2), * .layout #container .note:nth-child(3), * .layout #container .note:nth-child(4), * .layout #container .note:nth-child(5), * .layout #container .note:nth-child(6), * .layout #container .note:nth-child(7), * .layout #container .note:nth-child(8) {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 70px;
+  padding: 20px 0px;
+  border-radius: 10px;
+  font-family: 'Signika';
+  font-weight: normal;
+}
+
+* .layout #container .note:active:nth-child(1), * .layout #container .note:active:nth-child(2), * .layout #container .note:active:nth-child(3), * .layout #container .note:active:nth-child(4), * .layout #container .note:active:nth-child(5), * .layout #container .note:active:nth-child(6), * .layout #container .note:active:nth-child(7), * .layout #container .note:active:nth-child(8) {
+  -webkit-box-shadow: 3px 3px 5px 2px;
+          box-shadow: 3px 3px 5px 2px;
+}
+
+* .layout #container .note:active:nth-child(1) span, * .layout #container .note:active:nth-child(2) span, * .layout #container .note:active:nth-child(3) span, * .layout #container .note:active:nth-child(4) span, * .layout #container .note:active:nth-child(5) span, * .layout #container .note:active:nth-child(6) span, * .layout #container .note:active:nth-child(7) span, * .layout #container .note:active:nth-child(8) span {
+  -webkit-filter: brightness(130%);
+          filter: brightness(130%);
+}
+
+* .layout #container .note:nth-child(1) span, * .layout #container .note:nth-child(2) span, * .layout #container .note:nth-child(3) span, * .layout #container .note:nth-child(4) span, * .layout #container .note:nth-child(5) span, * .layout #container .note:nth-child(6) span, * .layout #container .note:nth-child(7) span, * .layout #container .note:nth-child(8) span {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+* {
+  cursor: pointer;
+}
+
+* body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #bbff99;
+  background-image: linear-gradient(319deg, #bbff99 0%, #ffec99 37%, #ff9999 100%);
+}
+
+* .space {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+
+* .space::before {
+  content: "";
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-image: url("../img/musicsheet.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  -webkit-transform: rotate(9dg);
+          transform: rotate(9dg);
+  opacity: 0.2;
+  z-index: -9;
+}
+
+* .space .baqueta {
+  position: absolute;
+  left: var(--mouse-x);
+  top: var(--mouse-y);
+  z-index: 9;
+}
+
+* .layout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100vw;
+  height: 75vh;
+  font-size: 3.1vw;
+}
+
+* .layout .head {
+  width: 60vw;
+  font-family: 'Yusei Magic', sans-serif;
+  font-size: 2.5vw;
+  text-align: center;
+}
+
+* .layout .head h1 {
+  margin: 0;
+}
+
+* .layout .head p {
+  margin-top: 10px;
+}
+
+* .layout #container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 700px;
+  height: 300px;
+  margin: 0 auto;
+}
+
+* .layout #container .screw {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  background-color: #c6c3ba;
+  border-radius: 50%;
+  -webkit-box-shadow: 1px 1px #999999, 1px 1px #999999;
+          box-shadow: 1px 1px #999999, 1px 1px #999999;
+}
+
+* .layout #container .screw:after {
+  content: "|";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  color: #585757;
+  font-size: 12px;
+  -webkit-transform: translateX(-52%) rotate(33deg);
+          transform: translateX(-52%) rotate(33deg);
+}
+
+* .layout #container .note:nth-child(1) {
+  background: #e83b3b;
+  -webkit-box-shadow: 3px 3px 0px 2px #a01313;
+          box-shadow: 3px 3px 0px 2px #a01313;
+  height: 270px;
+}
+
+* .layout #container .note:nth-child(1) span {
+  color: #a01313;
+}
+
+* .layout #container .note:nth-child(2) {
+  background: #e8ab3b;
+  -webkit-box-shadow: 3px 3px 0px 2px #a06e13;
+          box-shadow: 3px 3px 0px 2px #a06e13;
+  height: 250px;
+}
+
+* .layout #container .note:nth-child(2) span {
+  color: #a06e13;
+}
+
+* .layout #container .note:nth-child(3) {
+  background: #a0e83b;
+  -webkit-box-shadow: 3px 3px 0px 2px #65a013;
+          box-shadow: 3px 3px 0px 2px #65a013;
+  height: 230px;
+}
+
+* .layout #container .note:nth-child(3) span {
+  color: #65a013;
+}
+
+* .layout #container .note:nth-child(4) {
+  background: #3b86e8;
+  -webkit-box-shadow: 3px 3px 0px 2px #1350a0;
+          box-shadow: 3px 3px 0px 2px #1350a0;
+  height: 210px;
+}
+
+* .layout #container .note:nth-child(4) span {
+  color: #1350a0;
+}
+
+* .layout #container .note:nth-child(5) {
+  background: #9a3be8;
+  -webkit-box-shadow: 3px 3px 0px 2px #6013a0;
+          box-shadow: 3px 3px 0px 2px #6013a0;
+  height: 190px;
+}
+
+* .layout #container .note:nth-child(5) span {
+  color: #6013a0;
+}
+
+* .layout #container .note:nth-child(6) {
+  background: #3be8ab;
+  -webkit-box-shadow: 3px 3px 0px 2px #13a06e;
+          box-shadow: 3px 3px 0px 2px #13a06e;
+  height: 170px;
+}
+
+* .layout #container .note:nth-child(6) span {
+  color: #13a06e;
+}
+
+* .layout #container .note:nth-child(7) {
+  background: #eb8333;
+  -webkit-box-shadow: 3px 3px 0px 2px #a24f10;
+          box-shadow: 3px 3px 0px 2px #a24f10;
+  height: 150px;
+}
+
+* .layout #container .note:nth-child(7) span {
+  color: #a24f10;
+}
+
+* .layout #container .note:nth-child(8) {
+  background: #33ebe2;
+  -webkit-box-shadow: 3px 3px 0px 2px #10a29b;
+          box-shadow: 3px 3px 0px 2px #10a29b;
+  height: 130px;
+}
+
+* .layout #container .note:nth-child(8) span {
+  color: #10a29b;
+}
+
+* .layout #container .palos {
+  position: absolute;
+  left: -35px;
+  width: 775px;
+  height: 20px;
+  background: #ba793d;
+  border-radius: 50px;
+  z-index: -1;
+}
+
+* .layout #container .palo1 {
+  top: 85px;
+  -webkit-transform: rotate(3deg);
+          transform: rotate(3deg);
+}
+
+* .layout #container .palo2 {
+  top: 200px;
+  -webkit-transform: rotate(357deg);
+          transform: rotate(357deg);
+}
+
+@media only screen and (max-width: 850px) {
+  .space .baqueta {
+    display: none;
+  }
+  #container {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+    /* & .note {
+      transform:scale(0.8);
+    } */
+  }
+  #container .palos {
+    width: 750px;
+    left: -100px;
+  }
+  #container .palo1 {
+    top: 98px;
+    -webkit-transform: rotate(4deg) scale(0.8);
+            transform: rotate(4deg) scale(0.8);
+  }
+  #container .palo2 {
+    top: 190px;
+    -webkit-transform: rotate(356deg) scale(0.8);
+            transform: rotate(356deg) scale(0.8);
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  #landscape {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: fixed;
+    top: 0;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    background: #f2f2f2;
+    z-index: 990000;
+    width: 100%;
+    height: 100vh;
+    font-size: 120%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .layout {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 100vh;
+  }
+  .layout #container {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+  }
+}
+/*# sourceMappingURL=app.css.map */
