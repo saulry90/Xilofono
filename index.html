@@ -9,49 +9,92 @@
     <title>Xilófono</title>
 </head>
 <body>
-  <div id="landscape">
-    <div>
-   <p>
-   <img src="cambia la ruta de la imagen" alt=""><br>
-   ¡Gira el móvil! <br><span>Porfa</span>
-   </p>
-   </div>
- </div>
+  <div id="container">
 
-  <div class="space">
-    <div class="baqueta">
-      <img src="assets/img/drum.png" alt="">
+    <!-- Fondo animado notas -->
+    <div class="animatenotes-1">
+      <div class="noot-1">
+        &#9835; &#9833;
+      </div>
+      <div class="noot-2">
+        &#9833;
+      </div>
+      <div class="noot-3">
+        &#9839; &#9834;
+      </div>
+      <div class="noot-4">
+        &#9834;
+      </div>
+    </div>
+    <div class="animatenotes-2">
+      <div class="noot-1">
+        &#9835; &#9833;
+      </div>
+      <div class="noot-2">
+        &#9833;
+      </div>
+      <div class="noot-3">
+        &#9839; &#9834;
+      </div>
+      <div class="noot-4">
+        &#9834;
+      </div>
+    </div>
+    <div class="animatenotes-3">
+      <div class="noot-1">
+        &#9835; &#9833;
+      </div>
+      <div class="noot-2">
+        &#9833;
+      </div>
+      <div class="noot-3">
+        &#9839; &#9834;
+      </div>
+      <div class="noot-4">
+        &#9834;
+      </div>
+    </div>
+
+    <!-- Telon max-width 680px -->
+    <div id="landscape">
+      <div>
+        <p>
+          <img src="assets/img/phone.png" alt=""><br>
+          ¡Gira el móvil! <br><span>Porfa</span>
+        </p>
+      </div>
+    </div>
+
+    <!-- Baqueta espacio movimiento -->
+    <div class="space">
+      <div class="baqueta">
+        <img src="assets/img/drum.png" alt="">
+      </div>
+    </div>
+
+    <!-- Layout content -->
+    <div class="layout">
+      <div class="head">
+        <h1>Xilófono CSS</h1>
+        <p>Prueba a tocar las notas del xilófono con la baqueta o con las teclas del 1 al 9</p>
+      </div>
+
+      <div id="xilofono">
+        <div class="note" onclick="play('assets/mp3/DO.mp3')" onmousedown="titic()" onmouseup="toctoc()" data-soundaudio="assets/mp3/DO.mp3"><div class="screw"></div><span>DO</span><div class="screw"></div></div>
+        <div class="note" onclick="play('assets/mp3/RE.mp3')" onmousedown="titic()" onmouseup="toctoc()" data-soundaudio="assets/mp3/RE.mp3"><div class="screw"></div><span>RE</span><div class="screw"></div></div>
+        <div class="note" onclick="play('assets/mp3/MI.mp3')" onmousedown="titic()" onmouseup="toctoc()" data-soundaudio="assets/mp3/MI.mp3"><div class="screw"></div><span>MI</span><div class="screw"></div></div>
+        <div class="note" onclick="play('assets/mp3/FA.mp3')" onmousedown="titic()" onmouseup="toctoc()" data-soundaudio="assets/mp3/FA.mp3"><div class="screw"></div><span>FA</span><div class="screw"></div></div>
+        <div class="note" onclick="play('assets/mp3/SOL.mp3')" onmousedown="titic()" onmouseup="toctoc()" data-soundaudio="assets/mp3/SOL.mp3"><div class="screw"></div><span>SOL</span><div class="screw"></div></div>
+        <div class="note" onclick="play('assets/mp3/LA.mp3')" onmousedown="titic()" onmouseup="toctoc()" data-soundaudio="assets/mp3/LA.mp3"><div class="screw"></div><span>LA</span><div class="screw"></div></div>
+        <div class="note" onclick="play('assets/mp3/SI.mp3')" onmousedown="titic()" onmouseup="toctoc()" data-soundaudio="assets/mp3/SI.mp3"><div class="screw"></div><span>SI</span><div class="screw"></div></div>
+        <div class="note" onclick="play('assets/mp3/DO2.mp3')" onmousedown="titic()" onmouseup="toctoc()" data-soundaudio="assets/mp3/DO2.mp3"><div class="screw"></div><span>DO</span><div class="screw"></div></div>
+        <div class="palos palo1"></div>
+        <div class="palos palo2"></div>
+      </div>
     </div>
   </div>
-
-  <div class="layout">
-    <div class="head">
-      <h1>Xilófono CSS</h1>
-      <p>Prueba a tocar las notas del xilófono con la baqueta o con las teclas del 1 al 9</p>
-    </div>
-
-    <div id="container">
-      <div class="note" onclick="play('assets/mp3/DO.mp3')" onmousedown="titic()" onmouseup="toctoc()" data-soundaudio="assets/mp3/DO.mp3"><div class="screw"></div><span>DO</span><div class="screw"></div></div>
-      <div class="note" onclick="play('assets/mp3/RE.mp3')" onmousedown="titic()" onmouseup="toctoc()" data-soundaudio="assets/mp3/RE.mp3"><div class="screw"></div><span>RE</span><div class="screw"></div></div>
-      <div class="note" onclick="play('assets/mp3/MI.mp3')" onmousedown="titic()" onmouseup="toctoc()" data-soundaudio="assets/mp3/MI.mp3"><div class="screw"></div><span>MI</span><div class="screw"></div></div>
-      <div class="note" onclick="play('assets/mp3/FA.mp3')" onmousedown="titic()" onmouseup="toctoc()" data-soundaudio="assets/mp3/FA.mp3"><div class="screw"></div><span>FA</span><div class="screw"></div></div>
-      <div class="note" onclick="play('assets/mp3/SOL.mp3')" onmousedown="titic()" onmouseup="toctoc()" data-soundaudio="assets/mp3/SOL.mp3"><div class="screw"></div><span>SOL</span><div class="screw"></div></div>
-      <div class="note" onclick="play('assets/mp3/LA.mp3')" onmousedown="titic()" onmouseup="toctoc()" data-soundaudio="assets/mp3/LA.mp3"><div class="screw"></div><span>LA</span><div class="screw"></div></div>
-      <div class="note" onclick="play('assets/mp3/SI.mp3')" onmousedown="titic()" onmouseup="toctoc()" data-soundaudio="assets/mp3/SI.mp3"><div class="screw"></div><span>SI</span><div class="screw"></div></div>
-      <div class="note" onclick="play('assets/mp3/DO2.mp3')" onmousedown="titic()" onmouseup="toctoc()" data-soundaudio="assets/mp3/DO2.mp3"><div class="screw"></div><span>DO</span><div class="screw"></div></div>
-      <div class="palos palo1"></div>
-      <div class="palos palo2"></div>
-    </div>
-  </div>
-
       
-
   <audio id="audio"></audio>
-
-
-
-
-
 
   <script src="assets/js/app.js"></script>
 </body>
