@@ -30,12 +30,11 @@
   font-weight: normal;
   z-index: 9;
   &::before {
-    content: "";
+    content: "♪";
     display: none;
     position: absolute;
-    top: -3vh;
-    width: 15px;
-    height: 15px;
+    top: -5vh;
+    font-size: 2vw;
     border-radius: 50%;
     
   }
@@ -250,7 +249,7 @@
           @include notespan(hsl(0, 79%, 35%))
         }
         &::before {
-          background-color: hsl(0, 79%, 57%);
+          color: hsl(0, 79%, 57%);
         }
         
       }
@@ -261,7 +260,7 @@
           @include notespan(hsl(39, 79%, 35%))
         }
         &::before {
-          background-color: hsl(39, 79%, 57%);
+          color: hsl(39, 79%, 57%);
         }
       }
       // MI
@@ -271,7 +270,7 @@
           @include notespan(hsl(85, 79%, 35%))
         }
         &::before {
-          background-color: hsl(85, 79%, 57%);
+          color: hsl(85, 79%, 57%);
         }
       }
       // FA
@@ -281,7 +280,7 @@
           @include notespan(hsl(214, 79%, 35%))
         }
         &::before {
-          background-color: hsl(214, 79%, 57%);
+          color: hsl(214, 79%, 57%);
         }
       }
       // SOL
@@ -291,7 +290,7 @@
           @include notespan(hsl(273, 79%, 35%))
         }
         &::before {
-          background-color: hsl(273, 79%, 57%);
+          color: hsl(273, 79%, 57%);
         }
       }
       // LA
@@ -301,7 +300,7 @@
           @include notespan(hsl(159, 79%, 35%))
         }
         &::before {
-          background-color: hsl(159, 79%, 57%);
+          color: hsl(159, 79%, 57%);
         }
       }
       // SI
@@ -311,7 +310,7 @@
           @include notespan(hsl(26, 82%, 35%))
         }
         &::before {
-          background-color: hsl(26, 82%, 56%);
+          color: hsl(26, 82%, 56%);
         }
       }
       // DO
@@ -321,7 +320,7 @@
           @include notespan(hsl(177, 82%, 35%))
         }
         &::before {
-          background-color: hsl(177, 82%, 56%);
+          color: hsl(177, 82%, 56%);
         }
         
       }
@@ -448,10 +447,15 @@
       height: 140vh;
       max-height: initial;
       overflow: inherit;
+
+      & .note::before {
+        top: -6vh !important;
+      }
     }
 
     .space {
       & .baqueta {display: none;}
     }
   }
+  
 }
