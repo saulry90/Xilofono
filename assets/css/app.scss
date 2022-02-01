@@ -391,13 +391,13 @@
     }
   }
 }  
-  
+
 @media only screen and (max-width: 680px) {
   * {
     cursor: pointer;
   }
   body {margin: 0;}
-  .landscape,.layout {display: none;}
+  .space,.layout {display: none;}
 
   #landscape {
     position: relative;
