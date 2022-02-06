@@ -21,7 +21,18 @@ function play(audio) {
   sound.setAttribute('src', audio)
     sound.paused ? sound.play() : sound.currentTime = 0;
 }
-    
+  
+
+// Cursor firma
+const firma = document.querySelector(".firma-link");
+firma.addEventListener('mouseenter', event => {
+  console.log("event.button") 
+  document.querySelector(".baqueta img").style.display = "none";
+})
+firma.addEventListener('mouseleave', event => {
+  console.log("XAo") 
+  document.querySelector(".baqueta img").style.display = "block";
+})
 
 
 // Audio Keyboard

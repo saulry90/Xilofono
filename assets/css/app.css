@@ -213,6 +213,20 @@
   }
 }
 
+* body #container .firma {
+  position: relative;
+  text-align: center;
+}
+
+* body #container .firma-link {
+  color: #000;
+  cursor: pointer !important;
+}
+
+* body #container .firma-link:hover {
+  text-decoration: overline;
+}
+
 * #landscape {
   display: none;
 }
@@ -567,6 +581,15 @@
   }
   body .space .baqueta {
     display: none;
+  }
+  body .firma {
+    bottom: -35vh;
+  }
+}
+
+@media only screen and (max-height: 330px) {
+  .firma {
+    top: 250vh !important;
   }
 }
 /*# sourceMappingURL=app.css.map */

@@ -150,6 +150,19 @@
         }
       }
       
+
+      & .firma {
+        position: relative;
+        text-align: center;
+      }
+      & .firma-link {
+        color: #000;
+        cursor: pointer !important;
+        &:hover {
+          text-decoration: overline;
+        }
+  
+      }
      
     }
 
@@ -457,6 +470,15 @@
     .space {
       & .baqueta {display: none;}
     }
+
+    .firma {
+      bottom: -35vh;
+    }
   }
   
+}
+@media only screen and (max-height: 330px) {
+  .firma {
+    top: 250vh !important;
+  }
 }
