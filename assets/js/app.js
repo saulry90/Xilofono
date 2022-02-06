@@ -15,7 +15,7 @@ function toctoc() {
   document.querySelector(".baqueta img").style.transform = "rotate(0deg)";
 }
 
-// Audio Drum
+// Audio play
 function play(audio) {
   const sound = document.querySelector('#audio');
   sound.setAttribute('src', audio)
