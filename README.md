@@ -1,5 +1,7 @@
 # Xilófono CSS
 
+![Xilófono CSS print](https://postimg.cc/fVHV4kbR)
+
 Xilófono construido por css agregando estilos para generar la forma de las notas y de los palos que lo sujetan.
 La única imagen usada es para la baqueta del palo.
 Está bloqueado por media queries y estilos para que a partir de 680px te salga un mensaje de girar el dispositivo, pues si no no se podría apreciar al completo.
