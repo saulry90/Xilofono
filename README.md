@@ -1,6 +1,6 @@
 # Xilófono CSS
 
-![Xilófono CSS print](https://postimg.cc/fVHV4kbR)
+![Xilófono CSS print](https://i.postimg.cc/cJWwnnyw/print.jpg)
 
 Xilófono construido por css agregando estilos para generar la forma de las notas y de los palos que lo sujetan.
 La única imagen usada es para la baqueta del palo.
