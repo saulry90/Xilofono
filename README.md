@@ -8,7 +8,7 @@ Está bloqueado por media queries y estilos para que a partir de 680px te salga 
 
 Tiene funcionalidad con javascript para los eventos de tocar las notas tanto con ratón como con teclado o pulsando en pantalla. 
 En ese momento es llamada una función que reproduce el sonido de la nota en cuestión, a la vez se llama a otra función para rotar la imagen de la baqueta creando el efecto de movimiento.
-Hay otro evento que controla la posición del puntero del ratón en la pantalla para hacer aparecer la imagen de la baqueta haciendo el efecto de que esta sea el puntero.
+Hay otro evento que controla la posición del puntero del ratón en la pantalla haciendo que aparezca la imagen de la baqueta haciendo el efecto de que esta sea el puntero.
 
 
 ---
