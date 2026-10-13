@@ -4,10 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:image" content="https://i.postimg.cc/cJWwnnyw/print.jpg">
+    <meta name="description" content="Xilófono interactivo hecho con HTML, CSS/SCSS y JavaScript. Toca las notas con el ratón, la pantalla o las teclas del 1 al 8.">
+    <meta name="theme-color" content="#ffe8d8">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Xilófono interactivo">
+    <meta property="og:description" content="Xilófono interactivo hecho con HTML, CSS/SCSS y JavaScript.">
+    <meta property="og:image" content="assets/img/print.jpg">
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap">
     <link rel="stylesheet" href="assets/css/app.css">
-    
-    <title>Xilófono</title>
+
+    <title>Xilófono interactivo</title>
 </head>
 <body>
   <div id="container">
@@ -60,14 +69,14 @@
     <div id="landscape">
       <div>
         <p>
-          <img src="assets/img/phone.png" alt=""><br>
+          <img src="assets/img/phone.png" alt="Icono de un teléfono"><br>
           ¡Gira el móvil! <br><span>Porfa</span>
         </p>
       </div>
     </div>
 
     <!-- Baqueta espacio movimiento -->
-    <div class="space">
+    <div class="space" aria-hidden="true">
       <div class="baqueta">
         <img src="assets/img/drum.png" alt="">
       </div>
@@ -77,25 +86,25 @@
     <div class="layout">
       <div class="head">
         <h1>Xilófono CSS</h1>
-        <p>Prueba a tocar las notas del xilófono con la baqueta o con las teclas del 1 al 9</p>
+        <p>Prueba a tocar las notas del xilófono con la baqueta o con las teclas del 1 al 8</p>
       </div>
 
       <div id="xilofono">
-        <div class="note" onclick="play('assets/mp3/DO.mp3')" onmousedown="titic()" onmouseup="toctoc()" data-soundaudio="assets/mp3/DO.mp3"><div class="screw"></div><span>DO</span><div class="screw"></div></div>
-        <div class="note" onclick="play('assets/mp3/RE.mp3')" onmousedown="titic()" onmouseup="toctoc()" data-soundaudio="assets/mp3/RE.mp3"><div class="screw"></div><span>RE</span><div class="screw"></div></div>
-        <div class="note" onclick="play('assets/mp3/MI.mp3')" onmousedown="titic()" onmouseup="toctoc()" data-soundaudio="assets/mp3/MI.mp3"><div class="screw"></div><span>MI</span><div class="screw"></div></div>
-        <div class="note" onclick="play('assets/mp3/FA.mp3')" onmousedown="titic()" onmouseup="toctoc()" data-soundaudio="assets/mp3/FA.mp3"><div class="screw"></div><span>FA</span><div class="screw"></div></div>
-        <div class="note" onclick="play('assets/mp3/SOL.mp3')" onmousedown="titic()" onmouseup="toctoc()" data-soundaudio="assets/mp3/SOL.mp3"><div class="screw"></div><span>SOL</span><div class="screw"></div></div>
-        <div class="note" onclick="play('assets/mp3/LA.mp3')" onmousedown="titic()" onmouseup="toctoc()" data-soundaudio="assets/mp3/LA.mp3"><div class="screw"></div><span>LA</span><div class="screw"></div></div>
-        <div class="note" onclick="play('assets/mp3/SI.mp3')" onmousedown="titic()" onmouseup="toctoc()" data-soundaudio="assets/mp3/SI.mp3"><div class="screw"></div><span>SI</span><div class="screw"></div></div>
-        <div class="note" onclick="play('assets/mp3/DO2.mp3')" onmousedown="titic()" onmouseup="toctoc()" data-soundaudio="assets/mp3/DO2.mp3"><div class="screw"></div><span>DO</span><div class="screw"></div></div>
+        <button type="button" class="note" data-soundaudio="assets/mp3/DO.mp3" aria-label="Tocar nota DO"><div class="screw" aria-hidden="true"></div><span>DO</span><div class="screw" aria-hidden="true"></div></button>
+        <button type="button" class="note" data-soundaudio="assets/mp3/RE.mp3" aria-label="Tocar nota RE"><div class="screw" aria-hidden="true"></div><span>RE</span><div class="screw" aria-hidden="true"></div></button>
+        <button type="button" class="note" data-soundaudio="assets/mp3/MI.mp3" aria-label="Tocar nota MI"><div class="screw" aria-hidden="true"></div><span>MI</span><div class="screw" aria-hidden="true"></div></button>
+        <button type="button" class="note" data-soundaudio="assets/mp3/FA.mp3" aria-label="Tocar nota FA"><div class="screw" aria-hidden="true"></div><span>FA</span><div class="screw" aria-hidden="true"></div></button>
+        <button type="button" class="note" data-soundaudio="assets/mp3/SOL.mp3" aria-label="Tocar nota SOL"><div class="screw" aria-hidden="true"></div><span>SOL</span><div class="screw" aria-hidden="true"></div></button>
+        <button type="button" class="note" data-soundaudio="assets/mp3/LA.mp3" aria-label="Tocar nota LA"><div class="screw" aria-hidden="true"></div><span>LA</span><div class="screw" aria-hidden="true"></div></button>
+        <button type="button" class="note" data-soundaudio="assets/mp3/SI.mp3" aria-label="Tocar nota SI"><div class="screw" aria-hidden="true"></div><span>SI</span><div class="screw" aria-hidden="true"></div></button>
+        <button type="button" class="note" data-soundaudio="assets/mp3/DO2.mp3" aria-label="Tocar nota DO agudo"><div class="screw" aria-hidden="true"></div><span>DO</span><div class="screw" aria-hidden="true"></div></button>
         <div class="palos palo1"></div>
         <div class="palos palo2"></div>
       </div>
     </div>
 
     <div class="firma">
-      <a class="firma-link" href="https://github.com/saulry90/Xilofono" target="_blank">Saúl Roldán</a>
+      <a class="firma-link" href="https://github.com/saulry90/Xilofono" target="_blank" rel="noopener">Saúl Roldán</a>
     </div>
   </div>
       

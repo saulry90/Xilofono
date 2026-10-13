@@ -1,6 +1,3 @@
-//Fonts
-@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
-
 // background
 %bganimate {
   background: linear-gradient(254deg,#efffdf,#ffe8d8,#fff0bf,#fffdb7);
@@ -25,8 +22,8 @@
   align-items: center;
   width: 70px;
   padding: 20px 0px;
+  border: none;
   border-radius: 10px;
-  font-family: 'Signika';
   font-weight: normal;
   z-index: 9;
   &::before {
@@ -38,11 +35,13 @@
     border-radius: 50%;
     
   }
-  &:active {
+  &:active,
+  &.is-active {
     filter: brightness(95%) !important;
     &::before {display:block;}
   }
-  &:active span {
+  &:active span,
+  &.is-active span {
     filter:brightness(130%) !important;
   }
 }
@@ -63,7 +62,6 @@
 }
 
   * {
-  cursor: none;
   user-select: none;
 
   & body {
@@ -480,5 +478,21 @@
 @media only screen and (max-height: 330px) {
   .firma {
     top: 220px !important;
+  }
+}
+
+// Cursor personalizado solo en dispositivos con puntero fino
+@media (hover: hover) and (pointer: fine) and (min-width: 851px) and (min-height: 581px) {
+  * {
+    cursor: none;
+  }
+}
+
+// Respeta la preferencia de movimiento reducido
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
   }
 }

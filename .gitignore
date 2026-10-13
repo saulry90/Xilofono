@@ -1,0 +1,12 @@
+# Dependencias
+node_modules/
+
+# Sass
+.sass-cache/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
